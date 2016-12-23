@@ -1,23 +1,26 @@
+body {
+    margin: 0;
+}
+
 .wrapper {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
+    height: 100vh;
+    /*align-content: flex-start;*/
+    align-items: stretch;
 }
 
-.header, .main, .nav, .aside, .footer {
-    flex-grow: 1;
-    flex-basis: 100%;
+.header {
+    /*flex: 1 100%;*/
+    /*height: 100px;*/
 }
 
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
+.main {
+    /*flex: 1 70%;*/
 }
 
-@media all and (min-width: 800px) {
-    .main    { flex: 3 0; }
-    .aside-1 { order: 1; }
-    .main    { order: 2; }
-    .aside-2 { order: 3; }
-    .footer  { order: 4; }
+.aside {
+    /*flex: 1 30%;*/
 }
 
 .header {
@@ -26,17 +29,16 @@
 
 .footer {
     background: lightgreen;
+    /*align-self: stretch;*/
+    /*height: 400px;*/
+    overflow-y: scroll;
+    flex: 1 100%;
 }
 
 .main {
-    text-align: left;
     background: deepskyblue;
 }
 
-.aside-1 {
+.aside {
     background: gold;
-}
-
-.aside-2 {
-    background: hotpink;
 }
