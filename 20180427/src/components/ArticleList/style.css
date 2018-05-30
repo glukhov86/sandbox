@@ -1,0 +1,8 @@
+.article-list__li {
+    list-style: none;
+}
+
+.article-list__ul {
+    padding: 0;
+    margin: 0;
+}
