@@ -1,0 +1,52 @@
+C:\Users\aaglukhov\AppData\Local\Android\Sdk\tools\emulator.exe -netdelay none -netspeed full -avd Nexus5X
+
+#Сбросить настройки прокси
+
+npm config rm proxy
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+git config --global http.proxy http://192.168.15.109:3128
+git config --global https.proxy http://192.168.15.109:3128
+
+git config --global http.proxy http://192.168.15.111:3128
+git config --global https.proxy http://192.168.15.111:3128
+
+#Создать новое приложение React Native (устарело)
+npm install -g create-react-native-app
+cd /D D:\Projects
+###create-react-native-app AwesomeNativeBase
+
+#Создать новое приложение React Native
+react-native init EsspReactNativeApp
+cd EsspReactNativeApp
+npm install --save native-base
+npm install --save react-navigation
+npm install --save react-native-vector-icons 
+npm install --save react-native-popup-dialog
+###npm install @expo/vector-icons --save
+###npm install react-native-material-design --save
+
+#Команда решает проблему неотображающихся картинок
+react-native link
+
+# Unable to load script from assets index.android.bundle on windows
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+#Запустить приложение
+cd /D D:\Projects\MikronRfidSoftware\EsspPrintServer\EsspReactNativeApp\
+react-native run-android
+
+cd /D D:\Projects\ReactLearning\react-native\EsspClient
+react-native run-android
+
+#Включение режима "Живая перезагрузка"
+Open you emulator;
+Execute your application (react-native run-android);
+Make sure that you application is running;
+Click on emulator and press: CTRL + M.
+
+
+
+https://ionicframework.com/docs/ionicons/

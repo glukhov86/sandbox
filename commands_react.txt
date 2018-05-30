@@ -1,0 +1,13 @@
+cd /D D:\Projects\sandbox\react5
+mkdir react5
+cd react5
+npm init
+npm install --save react react-dom
+npm install --save react-toolbox
+npm install --save-dev babel-cli babel-preset-react
+npm install --save-dev babel-preset-env
+echo '{ "presets": ["react"] }' > .babelrc
+echo '<h1>Hello, world!</h1>' > index.js
+node_modules\.bin\babel index.js
+
+npm start
